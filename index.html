@@ -81,12 +81,12 @@
 
                 <div class="menubar-overlay">
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#hero">Services</a></li>
-                        <li><a href="#videosection">Video</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#partners">Partners</a></li>
+                        <li><a href="#home" class="item">Home</a></li>
+                        <li><a href="#about" class="item">About Us</a></li>
+                        <li><a href="#hero" class="item">Services</a></li>
+                        <li><a href="#videosection" class="item">Video</a></li>
+                        <li><a href="#contact" class="item">Contact</a></li>
+                        <li><a href="#partners" class="item">Partners</a></li>
                     </ul>
                 </div>
                     
@@ -344,6 +344,14 @@
             document.getElementById("overlay").style.display = "none"
             document.getElementById("openOverlay").style.display = "block";
         }
+
+        // Get all the nav items
+        var navItems = document.querySelectorAll('.item');
+
+        // Add a click event listener to each nav item
+        navItems.forEach(function(navItem) {
+            navItem.addEventListener('click', closeOverlay);
+        });
             
     </script>
 </body>
